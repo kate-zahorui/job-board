@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
 import { DetailedJob, JobBoard, NotFound } from '../pages';
-import './App.css';
 
 function App() {
   return (

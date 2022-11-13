@@ -1,43 +1,51 @@
 import {
+  ActionsButton,
   Button,
+  Container,
   JobAdditional,
   JobContacts,
   JobDescription,
   JobImages,
+  JobIntro,
   ReturnButton,
 } from '../../components';
+import s from './DetailedJob.module.css';
 
 const DetailedJob = () => {
   return (
-    <article>
-      <div>
-        <h1>Job Details</h1>
-        <div>
-          <button>Save to my list</button>
-          <button>Share</button>
-        </div>
-      </div>
-      <Button />
-      <section>
-        <h2>
-          Arbeitsmediziner/-in / Betriebsmediziner/-in (m/w/d) oder einen
-          Arzt/eine Ärztin (m/w/d) für die Weiterbildung zum Facharzt/ zur
-          Fachärztin für Arbeitsmedizin (m/w/d)
-        </h2>
-        <p>Posted 2 days ago</p>
-        <div>
-          <p>Brutto, per year</p>
-          <p>€ 54 000—60 000</p>
-        </div>
-        <JobDescription />
-      </section>
-      <Button />
-      <JobImages />
-      <JobAdditional />
+    <main className={s.background}>
+      <Container>
+        <div className={s.container}>
+          <div className={s.main}>
+            <div className={s.header}>
+              <h1 className={s.header__title}>Job Details</h1>
+              <div className={s.header__actions}>
+                <ActionsButton action="save" />
+                <ActionsButton action="share" />
+              </div>
+            </div>
+            <div className={s.desktop}>
+              <Button />
+            </div>
+            <section className={s.job}>
+              <JobIntro />
+              <JobDescription />
+            </section>
+            <div className={s.buttonbox}>
+              <Button />
+            </div>
 
-      <ReturnButton />
-      <JobContacts />
-    </article>
+            <JobImages />
+            <JobAdditional />
+          </div>
+
+          <JobContacts />
+        </div>
+        <div className={s.desktop}>
+          <ReturnButton />
+        </div>
+      </Container>
+    </main>
   );
 };
 

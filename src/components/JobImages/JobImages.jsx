@@ -1,7 +1,12 @@
+import { Title } from '../';
+
+import s from './JobImages.module.css';
+
 const JobImages = () => {
   return (
-    <section>
-      <h2>Attached images</h2>
+    <section className={s.section}>
+      <Title>Attached images</Title>
+      <div>images</div>
     </section>
   );
 };

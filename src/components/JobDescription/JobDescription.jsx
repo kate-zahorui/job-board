@@ -1,7 +1,9 @@
+import s from './JobDescription.module.css';
+
 const JobDescription = () => {
   return (
-    <div>
-      <p>
+    <div className={s.description}>
+      <p className={s.description__text}>
         At WellStar, we all share common goals. That’s what makes us so
         successful – and such an integral part of our communities. We want the
         same things, for our organization, for our patients, and for our
@@ -10,8 +12,8 @@ const JobDescription = () => {
         We continue to provide innovative care models, focused on improving
         quality and access to healthcare.
       </p>
-      <h3>Responsopilities</h3>
-      <p>
+      <h3 className={s.description__title}>Responsopilities</h3>
+      <p className={s.description__text}>
         Wellstar Medical Group, a physician-led multi-specialty group in
         Atlanta, Georgia, is currently recruiting for a BC/BE cardiothoracic
         surgeon to join their existing cardiovascular program. This is an
@@ -29,13 +31,21 @@ const JobDescription = () => {
         cardiac service line is the only center in Georgia with the Joint
         Commission’s Comprehensive Cardiac Center certification.
       </p>
-      <h3>Compensation & Benefits:</h3>
-      <p>Our physicians enjoy a wide range of benefits, including:</p>
-      <ul>
-        <li>Very competitive compensation package with bonuses</li>
-        <li>Medical, Dental, and Vision Insurance</li>
-        <li>Occurrence-based Malpractice Coverage</li>
-        <li>
+      <h3 className={s.description__title}>Compensation & Benefits:</h3>
+      <p className={s.description__text}>
+        Our physicians enjoy a wide range of benefits, including:
+      </p>
+      <ul className={s.description__list}>
+        <li className={s.description__item}>
+          Very competitive compensation package with bonuses
+        </li>
+        <li className={s.description__item}>
+          Medical, Dental, and Vision Insurance
+        </li>
+        <li className={s.description__item}>
+          Occurrence-based Malpractice Coverage
+        </li>
+        <li className={s.description__item}>
           Short-term and Long-term Disability Insurance and life insurance
         </li>
       </ul>

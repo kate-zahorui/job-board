@@ -1,10 +1,13 @@
-import { JobList } from '../../components';
+import { Container, JobList } from '../../components';
+import s from './JobBoard.module.css';
 
 const JobBoard = () => {
   return (
-    <div>
-      <JobList />
-    </div>
+    <main className={s.background}>
+      <Container>
+        <JobList />
+      </Container>
+    </main>
   );
 };
 
