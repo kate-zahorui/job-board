@@ -1,7 +1,11 @@
+import { useSelector } from 'react-redux';
+
 import s from './JobList.module.css';
 import svg from '../../images/sprite.svg';
 
 const JobList = () => {
+  const { items } = useSelector(state => state.jobs);
+
   return (
     <ul className={s.list}>
       <li className={s.item}>

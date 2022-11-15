@@ -1,12 +1,16 @@
 import axios from 'axios';
 
-axios.defaults.baseURL =
-  'https://api.json-generator.com/templates/ZM1r0eic3XEy/data';
-axios.defaults.headers.common.Authorization = `Bearer wm3gg940gy0xek1ld98uaizhz83c6rh2sir9f9fu`;
+const { REACT_APP_API_URL, REACT_APP_TOKEN } = process.env;
+
+const instance = axios.create({
+  baseURL: REACT_APP_API_URL,
+});
+
+instance.defaults.headers.common.authorization = `Bearer ${REACT_APP_TOKEN}`;
 
 export const UserAPI = {
   fetchJobs: async () => {
-    const response = await axios.get(`/`);
+    const response = await instance.get(`/`);
 
     return response.data;
   },
