@@ -14,14 +14,6 @@
   letter-spacing: -0.75px;
 }
 
-.job__date {
-  color: rgba(56, 65, 93, 0.6);
-  /* font */
-  font-size: 13px;
-  line-height: 1.92;
-  letter-spacing: 0.19px;
-}
-
 .salary__text {
   /* font */
   font-size: 18px;
@@ -58,14 +50,5 @@
 
   .salary {
     text-align: end;
-  }
-
-  .job__date {
-    order: 2;
-    color: rgba(56, 65, 93, 0.355988);
-    /* font */
-    font-size: 18px;
-    line-height: 1.33;
-    letter-spacing: -0.56px;
   }
 }

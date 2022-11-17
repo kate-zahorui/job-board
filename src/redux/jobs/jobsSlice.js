@@ -14,7 +14,8 @@ export const jobsSlice = createSlice({
   initialState,
   reducers: {
     setJob: (state, action) => {
-      state.currentJob = action.payload;
+      const job = state.items.find(i => i.id === action.payload);
+      state.currentJob = job;
     },
   },
   extraReducers: {

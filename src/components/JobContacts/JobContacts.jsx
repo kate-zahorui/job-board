@@ -1,8 +1,11 @@
-import { Title } from '../';
+import { useSelector } from 'react-redux';
 
+import { Title } from '../';
 import s from './JobContacts.module.css';
 
 const JobContacts = () => {
+  const { currentJob } = useSelector(state => state.jobs);
+
   return (
     <section>
       <div className={s.mobile}>
@@ -11,21 +14,19 @@ const JobContacts = () => {
       <div className={s.contacts}>
         <div className={s.contacts__bg}>
           <div className={s.contacts__text}>
-            <h3 className={s.contacts__name}>
-              Department name. University Hospital Giessen.
-            </h3>
+            <h3 className={s.contacts__name}>{currentJob.name}</h3>
             <address className={s.contacts__address}>
-              AKH Wien, 1090 Wien, Währinger Gürtel 18-20
+              {currentJob.address}
             </address>
             <address>
-              <a href="tel:+43014040012090" className={s.contacts__link}>
-                +43 (01) 40400-12090
+              <a href={`tel:${currentJob.phone}`} className={s.contacts__link}>
+                {currentJob.phone}
               </a>
               <a
-                href="mailto:post_akh_diz@akhwien.at"
+                href={`mailto:${currentJob.email}`}
                 className={s.contacts__link}
               >
-                post_akh_diz@akhwien.at
+                {currentJob.email}
               </a>
             </address>
           </div>

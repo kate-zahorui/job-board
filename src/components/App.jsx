@@ -5,7 +5,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<JobBoard />} />
-      <Route path="/:JobId" element={<DetailedJob />} />
+      <Route path="/:jobId" element={<DetailedJob />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

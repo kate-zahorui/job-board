@@ -43,12 +43,22 @@
 }
 
 .contacts__link {
+  display: block;
   color: rgba(255, 255, 255, 0.67);
   /* font */
   font-style: normal;
   line-height: 1.44;
   letter-spacing: -0.5px;
+  /* animation */
+  transition: color var(--anim-props);
 }
+
+.contacts__link:hover,
+.contacts__link:focus {
+  color: var(--text-main-color);
+}
+
+/* --text-main-color */
 
 .map {
   width: 100%;
