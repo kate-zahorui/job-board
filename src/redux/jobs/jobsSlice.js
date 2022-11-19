@@ -6,7 +6,7 @@ const initialState = {
   currentJob: null,
   isLoading: false,
   error: '',
-  page: 1,
+  perPage: 15,
 };
 
 export const jobsSlice = createSlice({

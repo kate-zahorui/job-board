@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { getJobs } from '../../redux/jobs/jobsOperations';
-import { Container, JobList } from '../../components';
+import { Container, PaginatedList } from '../../components';
 import s from './JobBoard.module.css';
 
 const JobBoard = () => {
@@ -22,7 +22,7 @@ const JobBoard = () => {
         {isLoading && <p>Loading...</p>}
         {error && <p>Error. {error.message}</p>}
 
-        {showJobs && <JobList />}
+        {showJobs && <PaginatedList />}
         {noJobs && <p>There're no jobs.</p>}
       </Container>
     </main>

@@ -5,42 +5,41 @@ import { JobDate } from '../';
 import s from './JobList.module.css';
 import svg from '../../images/sprite.svg';
 
-const JobList = () => {
+const JobList = ({ currentItems }) => {
   const { items } = useSelector(state => state.jobs);
 
   return (
     <ul className={s.list}>
-      {items.length > 0 &&
-        items.map(item => (
-          <li key={item.id} className={s.item}>
-            <div className={s.item__photo}>{/* <img src="" alt="" /> */}</div>
+      {currentItems.map(item => (
+        <li key={item.id} className={s.item}>
+          <div className={s.item__photo}>{/* <img src="" alt="" /> */}</div>
 
-            <div className={s.info}>
-              <div className={s.actions}>
-                <div className={s.actions__rating}></div>
+          <div className={s.info}>
+            <div className={s.actions}>
+              <div className={s.actions__rating}></div>
 
-                <div className={s.actions__sidebox}>
-                  <button className={s.actions__button}>
-                    <svg className={s.actions__icon} width="32" height="32">
-                      <use href={`${svg}#icon-saveBookmark`}></use>
-                    </svg>
-                  </button>
-                  <JobDate date={item.createdAt} />
-                </div>
-              </div>
-
-              <div className={s.text}>
-                <h2 className={s.text__title}>
-                  <Link to={`/${item.id}`} className={s.text__link}>
-                    {item.title}
-                  </Link>
-                </h2>
-                <p className={s.text__name}>{item.name}</p>
-                <p className={s.text__address}>{item.address}</p>
+              <div className={s.actions__sidebox}>
+                <button className={s.actions__button}>
+                  <svg className={s.actions__icon} width="32" height="32">
+                    <use href={`${svg}#icon-saveBookmark`}></use>
+                  </svg>
+                </button>
+                <JobDate date={item.createdAt} />
               </div>
             </div>
-          </li>
-        ))}
+
+            <div className={s.text}>
+              <h2 className={s.text__title}>
+                <Link to={`/${item.id}`} className={s.text__link}>
+                  {item.title}
+                </Link>
+              </h2>
+              <p className={s.text__name}>{item.name}</p>
+              <p className={s.text__address}>{item.address}</p>
+            </div>
+          </div>
+        </li>
+      ))}
     </ul>
   );
 };

@@ -8,5 +8,6 @@ export { default as JobDescription } from './JobDescription/JobDescription';
 export { default as JobImages } from './JobImages/JobImages';
 export { default as JobIntro } from './JobIntro/JobIntro';
 export { default as JobList } from './JobList/JobList';
+export { default as PaginatedList } from './PaginatedList/PaginatedList';
 export { default as ReturnButton } from './ReturnButton/ReturnButton';
 export { default as Title } from './Title/Title';
