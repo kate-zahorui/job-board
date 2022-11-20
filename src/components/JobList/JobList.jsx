@@ -12,7 +12,13 @@ const JobList = ({ currentItems }) => {
     <ul className={s.list}>
       {currentItems.map(item => (
         <li key={item.id} className={s.item}>
-          <div className={s.item__photo}>{/* <img src="" alt="" /> */}</div>
+          <div className={s.item__photobox}>
+            <img
+              src={item.pictures[0]}
+              alt={`${item.name}`}
+              className={s.item__image}
+            />
+          </div>
 
           <div className={s.info}>
             <div className={s.actions}>
